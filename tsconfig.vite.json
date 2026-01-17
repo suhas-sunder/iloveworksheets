@@ -5,7 +5,8 @@
     "app/**/*",
     "app/**/.server/**/*",
     "app/**/.client/**/*",
-    "server/**/*"
+    "server/**/*",
+    "app/routes/calculators/indoor-plants-watering-calculator.tsx"
   ],
   "compilerOptions": {
     "composite": true,
