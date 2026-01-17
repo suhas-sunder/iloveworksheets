@@ -1,9 +1,5 @@
 import * as React from "react";
 import type { Route } from "./+types/home";
-
-/** Stable server flag: true on SSR render, false in client bundle */
-const isServer = typeof document === "undefined";
-
 /* ========================
    Meta
 ======================== */
@@ -67,15 +63,26 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 function SiteHeader() {
   return (
     <div className="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-slate-200">
-      <div className="max-w-[1180px] mx-auto px-4 h-12 flex items-center justify-between">
-        <div className="font-extrabold tracking-tight text-slate-900 select-none">
-          <span className="mr-1">i</span>
-          <span role="img" aria-label="love" className="mr-1">
-            🩷
-          </span>
-          <span className="text-purple-700">Worksheets</span>
+      <div className="max-w-[1180px] mx-auto px-4 h-20 flex items-center justify-between">
+        {/* Brand */}
+        <div className="flex items-center gap-2 select-none">
+          <img
+            src="/images/iloveworksheets-final-icon-1-optimized.png"
+            alt="iLoveWorksheets mascot icon"
+            className="w-20 h-20 shrink-0"
+            loading="eager"
+          />
+
+          <div className="font-extrabold tracking-tight text-slate-900 text-lg leading-none">
+            <span className="mr-0.5">i</span>
+            <span role="img" aria-label="love" className="mr-0.5">
+              🩷
+            </span>
+            <span className="text-purple-700">Worksheets</span>
+          </div>
         </div>
 
+        {/* Nav */}
         <nav aria-label="Primary">
           <ul className="flex items-center gap-3 text-[13px] font-semibold">
             <li>
@@ -492,9 +499,10 @@ function HowItWorks() {
 
   return (
     <section className="mt-12">
-      <h2 className="text-xl font-extrabold text-slate-900">
-        How i🩷Worksheets works
+      <h2 className="flex items-center gap-2 text-xl font-extrabold text-slate-900">
+        <span>How i🩷Worksheets works</span>
       </h2>
+
       <p className="mt-2 text-sm text-slate-600 max-w-[85ch]">
         This landing page is designed to test search intent and engagement while
         the worksheet library grows over time.
